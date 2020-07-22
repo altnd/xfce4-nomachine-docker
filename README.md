@@ -1,12 +1,12 @@
-# Docker VDI (Virtual Desktop Instance)
+# XFCE4 Nomachine Docker
 Ubuntu Desktop 18.04 (xfce) Dockerfile with NoMachine remote access and firefox, chromium & more
 
 ### Build
 
 ```
 git clone <URL>
-cd docker-vdi
-docker build -t=docker-vdi .
+cd xfce4-nomachine-docker
+docker build -t=xfce4-nomachine-docker .
 ```
 
 
@@ -16,7 +16,7 @@ docker build -t=docker-vdi .
 ### Usage
 
 ```
-docker run -d --rm -p 4000:4000 -p 4080:4080 -p 4443:4443 --name docker-vdi -e PASSWORD=password --cap-add=SYS_PTRACE capriciousduck/docker-vdi
+docker run -d --rm -p 4000:4000 -p 4080:4080 -p 4443:4443 --name docker-vdi -e PASSWORD=password --cap-add=SYS_PTRACE capriciousduck/xfce4-nomachine-docker
 ```
 
 
