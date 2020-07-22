@@ -16,7 +16,7 @@ docker build -t=xfce4-nomachine-docker .
 ### Usage
 
 ```
-docker run -d --rm -p 4000:4000 -p 4080:4080 -p 4443:4443 --name docker-vdi -e PASSWORD=password --cap-add=SYS_PTRACE capriciousduck/xfce4-nomachine-docker
+docker run -d --rm -p 4000:4000 -p 4080:4080 -p 4443:4443 --name xfce4-desktop -e PASSWORD='your password' --cap-add=SYS_PTRACE capriciousduck/xfce4-nomachine-docker
 ```
 
 
