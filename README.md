@@ -4,7 +4,7 @@ Ubuntu Desktop 18.04 (xfce) Dockerfile with NoMachine remote access and firefox,
 ### Build
 
 ```
-git clone <URL>
+git clone https://github.com/capriciousduck/xfce4-nomachine-docker.git
 cd xfce4-nomachine-docker
 docker build -t=xfce4-nomachine-docker .
 ```
