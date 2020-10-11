@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG="en_US.UTF-8"
 ENV LANGUAGE=en_US
 ENV KEYMAP="en"
-ENV TIMEZONE="Europe/Helsinki"
+ENV TIMEZONE="Asia/Kolkata"
 #ENV DESKTOP="mate-desktop-environment-extras"
 ENV DESKTOP="xfce4"
 
@@ -63,7 +63,7 @@ FROM vdi_base as vdi
 #ENV NOMACHINE_MD5 d697e5a565507d522380c94d2f295d0
 
 # Free - lastest
-ENV NOMACHINE_PACKAGE_NAME nomachine_6.11.2_1_amd64.deb
+ENV NOMACHINE_PACKAGE_NAME nomachine_6.12.3_7_amd64.deb
 # ENV NOMACHINE_MD5 8fc4b0a467eff56f662f348c7e03c6ec
 
 # Enterprise
