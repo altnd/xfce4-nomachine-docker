@@ -3,10 +3,10 @@ FROM ubuntu:18.04 as vdi_base
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Configure timezone and locale to spanish and America/Bogota timezone. Change locale and timezone to whatever you want
-ENV LANG="en_US.UTF-8"
-ENV LANGUAGE=en_US
-ENV KEYMAP="en"
-ENV TIMEZONE="Asia/Kolkata"
+ENV LANG="de_DE.UTF-8"
+ENV LANGUAGE=de_DE
+ENV KEYMAP="de-latin1-nodeadkeys"
+ENV TIMEZONE="Europe/Berlin"
 #ENV DESKTOP="mate-desktop-environment-extras"
 ENV DESKTOP="xfce4"
 
