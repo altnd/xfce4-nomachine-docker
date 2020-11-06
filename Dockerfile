@@ -39,7 +39,7 @@ RUN apt-get clean && apt-get update && apt-get install -y locales apt-utils && \
 # RUN add-apt-repository ppa:webupd8team/tor-browser && apt-get update -y && \
 	# apt-get install -y aptitude tor firefox libreoffice htop nano git vim tor-browser iftop chromium-browser keepassx sshfs encfs terminator nmap tig mtr && \
 
-RUN	apt-get update && apt-get install -y chromium-browser firefox nano htop language-pack-de-base && \
+RUN	apt-get update && apt-get install -y chromium-browser firefox nano htop language-pack-de-base libreoffice libreoffice-l10n-de libreoffice-help-de && \
 	# Clean up APT when done.
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
