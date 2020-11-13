@@ -2,12 +2,11 @@ FROM ubuntu:18.04 as vdi_base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Configure timezone and locale to spanish and America/Bogota timezone. Change locale and timezone to whatever you want
+#Change locale and timezone to whatever you want
 ENV LANG="de_DE.UTF-8"
 ENV LANGUAGE=de_DE
 ENV KEYMAP="de-latin1-nodeadkeys"
 ENV TIMEZONE="Europe/Berlin"
-#ENV DESKTOP="mate-desktop-environment-extras"
 ENV DESKTOP="xfce4"
 
 
@@ -35,16 +34,25 @@ RUN apt-get clean && apt-get update && apt-get install -y locales apt-utils && \
     
     
 #######################################
-# additional softeware: download tor, firefox, libreoffice and git, etc
-# RUN add-apt-repository ppa:webupd8team/tor-browser && apt-get update -y && \
-	# apt-get install -y aptitude tor firefox libreoffice htop nano git vim tor-browser iftop chromium-browser keepassx sshfs encfs terminator nmap tig mtr && \
-
-RUN	apt-get update && apt-get install -y xarchiver firefox nano htop language-pack-de-base libreoffice libreoffice-l10n-de libreoffice-help-de && \
+# additional softeware:
+#basics
+RUN	apt-get update && apt-get install -y xarchiver nano htop language-pack-de-base && \
 	# Clean up APT when done.
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-
-
+#libreoffice + german language pack
+RUN	apt-get update && apt-get install -y libreoffice libreoffice-l10n-de libreoffice-help-de && \
+	# Clean up APT when done.
+	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	
+#browser firefox + language-pack german
+RUN	apt-get update && apt-get install -y firefox language-pack-de-base && \
+	# Clean up APT when done.
+	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#gimp + pdfviewer 
+RUN	apt-get update && apt-get install -y evince-gtk gimp gimp-help-de language-pack-gnome-de  && \
+	# Clean up APT when done.
+	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 
